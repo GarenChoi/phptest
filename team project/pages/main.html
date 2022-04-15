@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            display: grid;
+            grid-template-columns: 
+            "rule1" "rule1" "rule2" "rule2" "rule3" "rule3"
+            "graph" "graph" "graph" "graph" "graph" "graph"
+            "news" "news" "news" "support" "support" "support";
+            grid-template-columns: 15% 15% 15% 15% 15% 15%;
+            grid-template-rows: 10vh 30vh 20vh;
+            align-items: center;
+            grid-column: 1/2;
+            background-size:contain;
+            background: #0302291c;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h2 class="hTitle">방역 투게더</h2>
+        <div class="hBtn">
+            
+        </div>
+        <ul>
+            <li><a href="../community/board.php">커뮤니티</a></li>
+            <li><a href="#">로그인</a></li>
+            <li><a href="#">회원가입</a></li>
+        </ul>
+    </header>
+
+
+    <main id="contents">
+        <div class="rule1">
+            <div><img src="" alt=""></div>
+            <h3>6인 이상 금지</h3>
+            <p>인원 제한</p>
+        </div>
+        <div class="rule2">
+            <div><img src="" alt=""></div>
+            <h3>22까지 운영</h3>
+            <p>시설 운영시간</p>
+        </div>
+        <div class="rule3">
+            <div><img src="../img/ruleImg03.png" alt=""></div>
+            <h3>방역패스 일시중단</h3>
+            <p>방역패스</p>
+        </div>
+        <div class="graph">
+            <img src="../img/graphImg01.jpg" alt="">
+        </div>
+        <div class="news">
+            <h4>코로나 관련 뉴스</h4>
+            <div class="newBox1 newBox">
+                <img src="" alt="">
+                <p>코로나 확진자 5일·9일 투표 가능…"오후 5시부터 외출"</p>
+                <span>2022-03-02 13:02</span>
+            </div>
+            <div class="newBox2 newBox">
+                <img src="../img/newsImg02.jpg" alt="">
+                <p>2일 코로나19 신규확진 21만9241명, 사상최다…사망 96명</p>
+                <span>2022-03-02 09:14</span>
+            </div>
+        </div>
+        <div class="support">
+            <h4>재난지원금 정보</h4>
+            <div class="supBox1 supBox">
+                <img src="" alt="">
+                <p>소상공인 4분기 손실보상<em>3월3일부터 5부제</em></p>
+                <span>신청사이트 바로가기</span>
+            </div>
+            <div class="supBox2 supBox">
+                <img src="../img/supImg02.jpg" alt="">
+                <p>전국민 긴급재난지원금<em>3월 16일부터</em></p>
+                <span>신청사이트 바로가기</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.querySelector(".baseDataBtn").addEventListener("click", e => {
+            e.preventDefault;
+            document.querySelector(".baseData").style.display = "none";
+            document.querySelector(".modifyData").style.display = "none";
+            
+        })
+        document.querySelectorAll(".ask__nickName").forEach((e, i) => {
+            document.querySelectorAll("#answer__name").forEach((el, index) => {
+                if(e.innerText == el.innerText){
+                    document.querySelectorAll(".answer__view")[index].style.justifycontent = "start";
+                }
+            })
+        })
+
+        ask__nickName
+        answer__name
+    </script>
+</body>
+</html>

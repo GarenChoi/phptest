@@ -64,7 +64,7 @@
                     </div>
                     <div class="join-btn">
                         <button type="submit">수정하기</button>
-                        <a href="mypageRemove.php">탈퇴하기</a>
+                        <a href="mypageLeave.php" onclick="return noticeRemove();">탈퇴하기</a>
                     </div>
                 </form>
             </div>
@@ -98,6 +98,12 @@
             $("#youPassComment").text("비밀번호가 동일하지 않습니다!");
             return false;
         }
+    }
+
+    //탈퇴하기
+    function noticeRemove(){
+        let notice = confirm("정말 탈퇴하시겠습니까?","");
+        return notice;
     }
 </script>
 </body>
